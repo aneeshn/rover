@@ -2,8 +2,6 @@ package com.roverAgents.agents;
 
 import com.roverAgents.utils.Cardinality;
 import com.roverAgents.utils.ConstrainedCoordinates;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Random;
@@ -34,6 +32,13 @@ public class MarsRoverTest {
     @Test
     public void testCoordinateAndCardinalityOfRover(){
         testForCoordinates(defaultRover(),defaultXCoordinate,defaultYCoordinate,defaultOrientation);
+    }
+
+    @Test
+    public void testToStringFormat(){
+        AbstractMovableObject<ConstrainedCoordinates,Cardinality> abstractMovableObject = defaultRover();
+        String expectedOutput="0 0 N";
+        assertEquals(expectedOutput,abstractMovableObject.toString());
     }
 
     @Test

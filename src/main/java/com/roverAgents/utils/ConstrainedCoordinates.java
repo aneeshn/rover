@@ -5,6 +5,15 @@ public class ConstrainedCoordinates extends Coordinates {
     private int upperBoundOnY;
     private  int lowerBound =0;
 
+    public ConstrainedCoordinates() {
+    }
+
+    public ConstrainedCoordinates(int upperBoundOnX, int upperBoundOnY, int x, int y) {
+        this.upperBoundOnX = upperBoundOnX;
+        this.upperBoundOnY = upperBoundOnY;
+        this.setX(x);
+        this.setY(y);
+    }
 
     public void setUpperBoundOnX(int upperBoundOnX) {
         this.upperBoundOnX = upperBoundOnX;

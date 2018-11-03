@@ -1,27 +1,33 @@
 package com.roverAgents.agents;
 
 import com.roverAgents.utils.Actions;
+import com.roverAgents.utils.Cardinality;
+import com.roverAgents.utils.ConstrainedCoordinates;
 
 import java.util.List;
 
-public class RoverController {
+public class RoverController implements Controller{
 
-    public void executeActions(Controls rover, List<Actions> actions){
-
-        for (Actions action: actions) {
+    @Override
+    public void executeActions(AbstractMovableObject<ConstrainedCoordinates, Cardinality> abstractMovableObject, List<Actions> actionsList) {
+        for (Actions action: actionsList) {
             switch (action){
                 case L:
-                    rover.rotateLeft();
+                    abstractMovableObject.rotateLeft();
                     break;
                 case R:
-                    rover.rotateRight();
+                    abstractMovableObject.rotateRight();
                     break;
                 case M:
-                    rover.move();
+                    abstractMovableObject.move();
                     break;
             }
 
         }
     }
-    
+
+    @Override
+    public String relayLocation(AbstractMovableObject<ConstrainedCoordinates, Cardinality> abstractMovableObject) {
+        return abstractMovableObject.toString();
+    }
 }

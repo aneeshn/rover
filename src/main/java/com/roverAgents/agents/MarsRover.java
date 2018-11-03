@@ -6,6 +6,11 @@ import com.roverAgents.utils.ConstrainedCoordinates;
 public class MarsRover extends AbstractMovableObject<ConstrainedCoordinates,Cardinality> {
 
 
+    public MarsRover(int upperRightX, int upperRightY, int x, int y, Cardinality orientation){
+        super.setCoordinates(new ConstrainedCoordinates(upperRightX,upperRightY, x, y));
+        super.setOrientation(orientation);
+    }
+
     public MarsRover() {
         super.setCoordinates(defaultCoordinates());
         super.setOrientation(defaultOrientation());
@@ -102,5 +107,10 @@ public class MarsRover extends AbstractMovableObject<ConstrainedCoordinates,Card
                 this.getCoordinates().setX(this.getCoordinates().getX()-movementUnit);
                 break;
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.getCoordinates().getX() + " " +this.getCoordinates().getY()+" "+this.getOrientation();
     }
 }
