@@ -7,14 +7,6 @@ public abstract class AbstractMovableObject<C,O> implements StateRepresentation<
     protected int movementUnit =1;
     protected  int defaultCardinalCoordinates, defaultCardinalBounds =0;
 
-    public AbstractMovableObject() {
-    }
-
-    public AbstractMovableObject(C coordinates, O orientation) {
-        this.coordinates = coordinates;
-        this.orientation = orientation;
-    }
-
     @Override
     public C getCoordinates() {
         return coordinates;
@@ -33,18 +25,5 @@ public abstract class AbstractMovableObject<C,O> implements StateRepresentation<
         this.orientation = orientation;
     }
 
-    @Override
-    public void rotateLeft() {
 
-    }
-
-    @Override
-    public void rotateRight() {
-
-    }
-
-    @Override
-    public void move() {
-
-    }
 }

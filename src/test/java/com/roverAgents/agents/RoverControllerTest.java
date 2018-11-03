@@ -3,6 +3,7 @@ package com.roverAgents.agents;
 import com.roverAgents.utils.Actions;
 import com.roverAgents.utils.Cardinality;
 import com.roverAgents.utils.ConstrainedCoordinates;
+import com.roverAgents.utils.ConstrainedCoordinatesTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,10 +14,7 @@ import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-        MarsRoverTest.class
-})
+
 public class RoverControllerTest {
 
 

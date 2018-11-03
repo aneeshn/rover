@@ -28,6 +28,13 @@ public class ConstrainedCoordinatesTest {
     }
 
     @Test
+    public void testingConstructor(){
+        ConstrainedCoordinates constrainedCoordinates = new ConstrainedCoordinates(5,5,1,2);
+        assertEquals(1,constrainedCoordinates.getX());
+        assertEquals(2,constrainedCoordinates.getY());
+    }
+
+    @Test
     public void testSettingOutOfBoundsCoordinates(){
         ConstrainedCoordinates constrainedCoordinates = new ConstrainedCoordinates();
         constrainedCoordinates.setUpperBoundOnX(upperbound);

@@ -64,9 +64,6 @@ public class MarsRover extends AbstractMovableObject<ConstrainedCoordinates,Card
             case W:
                 this.setOrientation(Cardinality.S);
                 break;
-            default:
-                this.setOrientation(this.getOrientation());
-                break;
         }
     }
 
@@ -84,9 +81,6 @@ public class MarsRover extends AbstractMovableObject<ConstrainedCoordinates,Card
                 break;
             case W:
                 this.setOrientation(Cardinality.N);
-                break;
-            default:
-                this.setOrientation(this.getOrientation());
                 break;
         }
     }
