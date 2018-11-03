@@ -22,5 +22,5 @@ Input Sequence for the Rovers:
 
 Output of rovers:
 
-1. Final Co-ordinated and Orientation
+1. Final Co-ordinates and Orientation
 
